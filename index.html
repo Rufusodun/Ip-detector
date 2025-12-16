@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+    <!-- map  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <!-- styles -->
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section class="bg-[url('images/pattern-bg-mobile.png')] bg-cover h-70">
+      <h1 class="text-center pt-7 text-3xl text-white">IP Address Tracker</h1>
+      <form class="flex justify-center items-center" action="" id="ip-form">
+        <div class="pt-6 flex">
+          <input
+            class="bg-white px-10 py-4 rounded-l-lg"
+            type="text"
+            id="input"
+          />
+          <!-- <div> -->
+          <button id="ip-button" class="bg-black px-6 py-5.5 rounded-r-2xl">
+            <img src="./images/icon-arrow.svg" alt="" />
+          </button>
+          <!-- </div> -->
+        </div>
+      </form>
+    </section>
+    <!-- map  -->
+    <section id="map" class="h-screen w-full z-0"></section>
+    <!--  -->
+    <section class="flex justify-center items-center pt-3">
+      <div class="text-center bg-white w-90 h-92 rounded-3xl absolute top-45">
+        <div class="lg:flex lg:flex-col lg:flex-wrap">
+          <p
+            class="uppercase text-sm tracking-[0.1rem] pt-5 pb-2 text-gray-400"
+          >
+            ip address
+          </p>
+          <h2 class="text-2xl font-semibold" id="ip-address"></h2>
+        </div>
+        <!--  -->
+        <div class="lg:flex lg:flex-col lg:flex-wrap">
+          <p
+            class="uppercase text-sm tracking-[0.1rem] pt-5 pb-2 text-gray-400"
+          >
+            location
+          </p>
+          <h2 class="text-2xl font-semibold" id="location"></h2>
+        </div>
+        <!--  -->
+        <div class="lg:flex lg:flex-col lg:flex-wrap">
+          <p
+            class="uppercase text-sm tracking-[0.1rem] pt-5 pb-2 text-gray-400"
+          >
+            timezone
+          </p>
+          <h2 class="text-2xl font-semibold" id="timezone"></h2>
+        </div>
+        <!--  -->
+        <div class="lg:flex lg:flex-col lg:flex-wrap">
+          <p
+            class="uppercase text-sm tracking-[0.1rem] pt-5 pb-2 text-gray-400"
+          >
+            isp
+          </p>
+          <h2 class="text-2xl font-semibold" id="isp"></h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- leaflet  -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
